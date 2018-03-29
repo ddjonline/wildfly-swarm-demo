@@ -8,7 +8,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.sql.Date;
 import java.util.Objects;
 
-
 @Entity
 @Table(name = "book")
 @XmlRootElement
@@ -26,9 +25,15 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 40)
+    @Column(length = 80)
     @NotNull
-    private String name;
+    private String title;
+
+    @Column(length = 80)
+    private String author;
+
+    @Column(length = 13)
+    private String isbn;
 
     @Column(name = "created", columnDefinition = "DATE DEFAULT CURRENT_DATE")
     private Date created;
@@ -41,12 +46,28 @@ public class Book {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getISBN() {
+        return isbn;
+    }
+
+    public void setISBN(String isbn) {
+        this.isbn = isbn;
     }
 
     public Date getCreated() {
@@ -79,7 +100,9 @@ public class Book {
     public String toString() {
         return "Speaker{" +
                 "id='" + id + '\'' +
-                ", name='" + getName() + '\'' +
+                ", title='" + getTitle() + '\'' +
+                ", author='" + getAuthor() + '\'' +
+                ", isbn='" + getISBN() + '\'' +
                 ", created='" + getCreated().toString() +
                 '}';
     }
