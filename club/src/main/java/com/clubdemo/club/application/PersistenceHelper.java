@@ -10,7 +10,7 @@ public class PersistenceHelper {
     @PersistenceContext(unitName = "clubPU")
     private EntityManager em;
 
-    public EntityManager getEntitiyManager() {
+    public EntityManager getEntityManager() {
         return em;
     }
 }

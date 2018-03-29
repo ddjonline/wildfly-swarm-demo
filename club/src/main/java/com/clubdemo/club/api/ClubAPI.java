@@ -22,7 +22,7 @@ public class ClubAPI {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll() {
-        TypedQuery<Club> query = persistenceHelper.getEntitiyManager().createNamedQuery(Club.FIND_ALL, Club.class);
+        TypedQuery<Club> query = persistenceHelper.getEntityManager().createNamedQuery(Club.FIND_ALL, Club.class);
         Collection<Club> allClubs = query.getResultList();
         return Response.ok(allClubs).build();
     }
@@ -31,7 +31,7 @@ public class ClubAPI {
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response findById(final @PathParam("id")Long id) {
-        Club club = persistenceHelper.getEntitiyManager().find(Club.class, id);
+        Club club = persistenceHelper.getEntityManager().find(Club.class, id);
         return Response.ok(club).build();
     }
 }
