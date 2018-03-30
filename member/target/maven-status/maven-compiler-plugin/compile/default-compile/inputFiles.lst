@@ -1,0 +1,3 @@
+/home/devadmin/projects/wildfly-swarm-demo/member/src/main/java/com/memberdemo/member/entity/Member.java
+/home/devadmin/projects/wildfly-swarm-demo/member/src/main/java/com/memberdemo/member/api/MemberAPI.java
+/home/devadmin/projects/wildfly-swarm-demo/member/src/main/java/com/memberdemo/member/application/ApplictionActivator.java

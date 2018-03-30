@@ -6,6 +6,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.sql.Date;
+import java.util.List;
 import java.util.Objects;
 
 
@@ -29,6 +30,12 @@ public class Club {
     @Column(length = 40)
     @NotNull
     private String name;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+    private List<ClubBook> books;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+    private List<ClubMember> members;
 
     @Column(name = "created", columnDefinition = "DATE DEFAULT CURRENT_DATE")
     private Date created;
