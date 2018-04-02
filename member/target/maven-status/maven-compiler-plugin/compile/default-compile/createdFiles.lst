@@ -1,3 +1,4 @@
 com/memberdemo/member/application/ApplictionActivator.class
 com/memberdemo/member/api/MemberAPI.class
+com/memberdemo/member/application/PersistenceHelper.class
 com/memberdemo/member/entity/Member.class

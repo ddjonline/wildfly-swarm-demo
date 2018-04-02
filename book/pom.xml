@@ -12,6 +12,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <version.wildfly-swarm>2018.3.3</version.wildfly-swarm>
+        <version.postgresql>9.2.23</version.postgresql>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -55,11 +56,11 @@
         </resources>
         <pluginManagement>
             <plugins>
-                <!--<plugin>-->
-                    <!--<groupId>org.wildfly.plugins</groupId>-->
-                    <!--<artifactId>wildfly-maven-plugin</artifactId>-->
-                    <!--<version>1.2.1.Final</version>-->
-                <!--</plugin>-->
+                <plugin>
+                    <groupId>org.wildfly.plugins</groupId>
+                    <artifactId>wildfly-maven-plugin</artifactId>
+                    <version>1.2.1.Final</version>
+                </plugin>
                 <plugin>
                     <groupId>org.wildfly.swarm</groupId>
                     <artifactId>wildfly-swarm-plugin</artifactId>

@@ -98,7 +98,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Speaker{" +
+        return "Book{" +
                 "id='" + id + '\'' +
                 ", title='" + getTitle() + '\'' +
                 ", author='" + getAuthor() + '\'' +
