@@ -9,12 +9,11 @@ import java.sql.Date;
 import java.util.Objects;
 
 @Entity
-@Table(name = "book")
+@Table(name = "member")
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @NamedQueries({
-        @NamedQuery(name = Member.FIND_ALL, query = "select m from Member m"),
-        @NamedQuery(name = Member.FIND_BY_ID, query = "select m from Member m where m.id = ?")
+        @NamedQuery(name = Member.FIND_ALL, query = "select m from Member m")
 })
 public class Member {
 

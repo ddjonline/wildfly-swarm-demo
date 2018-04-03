@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <data-source>
+        <name>java:global/memberPU</name>
+        <class-name>org.postgresql.xa.PGXADataSource</class-name>
+        <server-name>localhost</server-name>
+        <port-number>5432</port-number>
+        <database-name>memberprod</database-name>
+        <user>confighub</user>
+        <password>confighub</password>
+        <property>
+            <name>fish.payara.validation-classname</name>
+            <value>org.glassfish.api.jdbc.validation.PostgresConnectionValidation</value>
+        </property>
+    </data-source>
+</web-app>

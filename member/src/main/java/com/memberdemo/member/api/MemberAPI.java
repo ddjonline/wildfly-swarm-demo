@@ -3,6 +3,7 @@ package com.memberdemo.member.api;
 import com.memberdemo.member.application.PersistenceHelper;
 import com.memberdemo.member.entity.Member;
 
+import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.TypedQuery;
 import javax.ws.rs.GET;
@@ -13,7 +14,8 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Collection;
 
-@Path("/member")
+@Path("member")
+@Stateless
 public class MemberAPI {
 
     @Inject

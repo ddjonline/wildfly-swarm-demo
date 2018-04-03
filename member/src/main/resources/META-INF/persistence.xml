@@ -4,14 +4,12 @@
              http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
 
-    <persistence-unit name="memberPU">
+    <persistence-unit name="memberPU" transaction-type="JTA">
 
-        <jta-data-source>java:jboss/datasources/memberPU</jta-data-source>
+        <jta-data-source>java:global/memberPU</jta-data-source>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
-            <!-- Properties for Hibernate -->
-            <!--<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL94Dialect" />-->
-            <property name="hibernate.hbm2ddl.auto" value="validate" />
-            <property name="hibernate.show_sql" value="false" />
+            <property name="javax.persistence.schema-generation.database.action" value="validate" />
         </properties>
 
     </persistence-unit>
