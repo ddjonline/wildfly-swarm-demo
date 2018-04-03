@@ -26,7 +26,7 @@ public class MemberAPI {
     public Response getAll() {
         TypedQuery<Member> query = persistenceHelper.getEntityManager().createNamedQuery(Member.FIND_ALL, Member.class);
         Collection<Member> allMembers = query.getResultList();
-        return Response.ok(allMembers).build();
+        return Response.ok("hello world").build();
     }
 
     @GET
