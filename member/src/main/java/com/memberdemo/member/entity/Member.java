@@ -1,12 +1,21 @@
 package com.memberdemo.member.entity;
 
-import javax.persistence.*;
+import java.sql.Date;
+import java.util.Objects;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.sql.Date;
-import java.util.Objects;
+import javax.xml.bind.annotation.XmlTransient;
 
 @Entity
 @Table(name = "member")
@@ -31,8 +40,9 @@ public class Member {
     @Column(length = 80)
     private String lastName;
 
-    @Column(name = "created", columnDefinition = "DATE DEFAULT CURRENT_DATE")
-    private Date created;
+//    @Column(name = "created", columnDefinition = "DATE DEFAULT CURRENT_DATE")
+//    @XmlTransient
+//    private Date created;
 
     public Long getId() {
         return id;
@@ -58,13 +68,13 @@ public class Member {
         this.lastName = lastName;
     }
 
-    public Date getCreated() {
-        return created;
-    }
-
-    public void setCreated(Date created) {
-        this.created = created;
-    }
+//    public Date getCreated() {
+//        return created;
+//    }
+//
+//    public void setCreated(Date created) {
+//        this.created = created;
+//    }
 
     // ======================================
     // =   Methods hash, equals, toString   =
@@ -89,7 +99,7 @@ public class Member {
                 "id='" + id + '\'' +
                 ", firstName='" + getFirstName() + '\'' +
                 ", lastName='" + getLastName() + '\'' +
-                ", created='" + getCreated().toString() +
+//                ", created='" + getCreated().toString() +
                 '}';
     }
 }

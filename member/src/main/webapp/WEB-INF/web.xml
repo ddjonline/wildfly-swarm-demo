@@ -11,11 +11,11 @@
     <data-source>
         <name>java:global/memberPU</name>
         <class-name>org.postgresql.xa.PGXADataSource</class-name>
-        <server-name>localhost</server-name>
-        <port-number>5432</port-number>
-        <database-name>memberprod</database-name>
-        <user>confighub</user>
-        <password>confighub</password>
+        <server-name>${dbhost}</server-name>
+        <port-number>${dbport}</port-number>
+        <database-name>${db}</database-name>
+        <user>${dbuser}</user>
+        <password>${dbpass}</password>
         <property>
             <name>fish.payara.validation-classname</name>
             <value>org.glassfish.api.jdbc.validation.PostgresConnectionValidation</value>

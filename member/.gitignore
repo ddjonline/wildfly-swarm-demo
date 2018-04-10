@@ -4,3 +4,4 @@ ${env.M2_REPO}
 .project
 .settings
 .classpath
+.vscode/

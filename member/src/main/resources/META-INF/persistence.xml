@@ -9,7 +9,9 @@
         <jta-data-source>java:global/memberPU</jta-data-source>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
-            <property name="javax.persistence.schema-generation.database.action" value="validate" />
+            <!-- <property name="javax.persistence.schema-generation.database.action" value="validate" /> -->
+            <property name="hibernate.hbm2ddl.auto" value="validate" />
+            <property name="hibernate.show_sql" value="false" />
         </properties>
 
     </persistence-unit>
