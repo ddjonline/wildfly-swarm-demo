@@ -1,3 +1,6 @@
 ${env.M2_REPO}
-.idea
+.idea/
 target
+.classpath
+.project
+.settings

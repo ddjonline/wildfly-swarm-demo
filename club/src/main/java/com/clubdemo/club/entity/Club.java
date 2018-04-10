@@ -31,12 +31,6 @@ public class Club {
     @NotNull
     private String name;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
-    private List<ClubBook> books;
-
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
-    private List<ClubMember> members;
-
     @Column(name = "created", columnDefinition = "DATE DEFAULT CURRENT_DATE")
     private Date created;
 
@@ -63,7 +57,6 @@ public class Club {
     public void setCreated(Date created) {
         this.created = created;
     }
-
 
     // ======================================
     // =   Methods hash, equals, toString   =
