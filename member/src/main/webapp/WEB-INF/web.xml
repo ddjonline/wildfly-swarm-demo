@@ -12,7 +12,7 @@
         <name>java:global/memberPU</name>
         <class-name>org.postgresql.xa.PGXADataSource</class-name>
         <server-name>${dbhost}</server-name>
-        <port-number>${dbport}</port-number>
+        <port-number>5432</port-number>
         <database-name>${db}</database-name>
         <user>${dbuser}</user>
         <password>${dbpass}</password>
